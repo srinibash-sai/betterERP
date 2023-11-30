@@ -99,7 +99,8 @@ public class api {
                     action,
                     urldata
             ));
-            return ResponseEntity.ok("{\"message\":\"Bad Crendential\"}");
+//            return ResponseEntity.ok("{\"message\":\"Bad Crendential\"}");
+            return ResponseEntity.badRequest().body("{\"message\":\"Bad Crendential\"}");
         }
         return ResponseEntity.ok(studentData);
     }
@@ -117,3 +118,5 @@ public class api {
         return ResponseEntity.ok(superuser);
     }
 }
+
+
