@@ -117,6 +117,11 @@ public class api {
         superuserRepository.delete(superuser);
         return ResponseEntity.ok(superuser);
     }
+
+    @GetMapping("/api/health")
+    public ResponseEntity<?> health(){
+        return ResponseEntity.ok("Good");
+    }
 }
 
 
