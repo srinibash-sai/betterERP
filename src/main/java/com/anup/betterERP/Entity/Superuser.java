@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @ToString
 @Document(collection = "superuser")
-public class superuser {
+public class Superuser {
     private String name;
     private String password;
 }

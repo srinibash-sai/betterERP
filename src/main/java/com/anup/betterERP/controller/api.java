@@ -2,7 +2,7 @@ package com.anup.betterERP.controller;
 
 import com.anup.betterERP.Entity.badLoginLog;
 import com.anup.betterERP.Entity.logs;
-import com.anup.betterERP.Entity.superuser;
+import com.anup.betterERP.Entity.Superuser;
 import com.anup.betterERP.repository.badLoginLogRepo;
 import com.anup.betterERP.repository.dataRepository;
 import com.anup.betterERP.repository.logRepository;
@@ -106,22 +106,20 @@ public class api {
     }
 
 
-    @PostMapping("/student/createuser")
-    public ResponseEntity<?> createSuperUser(@RequestBody superuser superuser){
-        superuserRepository.save(superuser);
-        return ResponseEntity.ok(superuser);
-    }
-
-    @PostMapping("/student/deleteuser")
-    public ResponseEntity<?> deleteSuperUser(@RequestBody superuser superuser){
-        superuserRepository.delete(superuser);
-        return ResponseEntity.ok(superuser);
-    }
+//    @PostMapping("/student/createuser")
+//    public ResponseEntity<?> createSuperUser(@RequestBody Superuser superuser){
+//        superuserRepository.save(superuser);
+//        return ResponseEntity.ok(superuser);
+//    }
+//
+//    @PostMapping("/student/deleteuser")
+//    public ResponseEntity<?> deleteSuperUser(@RequestBody Superuser superuser){
+//        superuserRepository.delete(superuser);
+//        return ResponseEntity.ok(superuser);
+//    }
 
     @GetMapping("/api/health")
     public ResponseEntity<?> health(){
         return ResponseEntity.ok("Good");
     }
 }
-
-
