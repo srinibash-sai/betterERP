@@ -76,17 +76,17 @@ public class api {
             }
             else if (action.equalsIgnoreCase("number"))
             {
-                query.addCriteria(Criteria.where("vchContactNo").is(urldata));
+                query.addCriteria(Criteria.where("vchContactNo").is(urldata.toUpperCase()));
                 studentData = mongoTemplate.find(query, studentData.class);
             }
             else if (action.equalsIgnoreCase("fnumber"))
             {
-                query.addCriteria(Criteria.where("vchFathersMobileNo").is(urldata));
+                query.addCriteria(Criteria.where("vchFathersMobileNo").is(urldata.toUpperCase()));
                 studentData = mongoTemplate.find(query, studentData.class);
             }
             else if (action.equalsIgnoreCase("registrationno"))
             {
-                query.addCriteria(Criteria.where("vchRegistrationNo").is(urldata));
+                query.addCriteria(Criteria.where("vchRegistrationNo").is(urldata.toUpperCase()));
                 studentData = mongoTemplate.find(query, studentData.class);
             }
         }
